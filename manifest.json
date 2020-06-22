@@ -1,0 +1,25 @@
+{
+    "name": "Salesforce Refresh Dashboard",
+    "version": "0.0.1",
+    "description": "Useful!",
+    "background": {
+        "scripts": [
+            "background.js"
+        ],
+        "persistent": false
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://*.lightning.force.com/lightning/r/Dashboard/*"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "permissions": [
+        "activeTab"
+    ],
+    "manifest_version": 2
+}
